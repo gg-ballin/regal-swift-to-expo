@@ -42,6 +42,11 @@ export default function RootLayout() {
             name="seats/[showtimeId]"
             options={{ title: 'Select Seats', headerBackButtonDisplayMode: 'minimal' }}
           />
+          {/* SWIFT: TicketViewController: title, navigationItem.hidesBackButton = true (also disables swipe-back). */}
+          <Stack.Screen
+            name="ticket/[ticketId]"
+            options={{ title: 'Your Ticket', headerBackVisible: false, gestureEnabled: false }}
+          />
         </Stack>
       </ThemeProvider>
     </QueryClientProvider>
