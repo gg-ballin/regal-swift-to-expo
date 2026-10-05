@@ -37,6 +37,11 @@ export default function RootLayout() {
         <StatusBar style="light" />
         <Stack screenOptions={stackScreenOptions}>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          {/* SWIFT: SeatSelectionViewController: title, backButtonDisplayMode = .minimal, hidesBottomBarWhenPushed = true. */}
+          <Stack.Screen
+            name="seats/[showtimeId]"
+            options={{ title: 'Select Seats', headerBackButtonDisplayMode: 'minimal' }}
+          />
         </Stack>
       </ThemeProvider>
     </QueryClientProvider>
