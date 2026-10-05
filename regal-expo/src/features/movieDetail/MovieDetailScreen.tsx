@@ -3,6 +3,7 @@ import { ActivityIndicator, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-screens/experimental';
 
 import { ErrorState } from '@/components/ErrorState';
+import { useDemoRoute } from '@/features/dev/useDemoRoute';
 import { colors, spacing } from '@/theme/theme';
 
 import { DateStrip } from './components/DateStrip';
@@ -19,6 +20,7 @@ const TAB_TITLES = MOVIE_DETAIL_TABS.map((tab) => tab.toUpperCase());
 // SWIFT: UIViewController owning a UICollectionView + UICollectionViewDiffableDataSource; viewDidLoad wires `viewModel.onChange -> render`.
 export function MovieDetailScreen() {
   const { rows, hasError, errorMessage, retry, selectTab, selectDate, selectShowtime } = useMovieDetail();
+  useDemoRoute();
 
   // SWIFT: renderBackground(for:) sets collectionView.backgroundView to a UIActivityIndicatorView or the error view.
   if (rows.length === 0) {

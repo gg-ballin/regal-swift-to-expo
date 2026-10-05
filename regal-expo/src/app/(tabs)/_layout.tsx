@@ -30,6 +30,10 @@ export default function TabsLayout() {
         <NativeTabs.Trigger.Label>REWARDS</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon sf="r.circle" md="stars" />
       </NativeTabs.Trigger>
+      <NativeTabs.Trigger name="tickets">
+        <NativeTabs.Trigger.Label>TICKETS</NativeTabs.Trigger.Label>
+        <NativeTabs.Trigger.Icon sf="qrcode" md="qr_code" />
+      </NativeTabs.Trigger>
       <NativeTabs.Trigger name="more">
         <NativeTabs.Trigger.Label>MORE</NativeTabs.Trigger.Label>
         <NativeTabs.Trigger.Icon sf="ellipsis" md="more_horiz" />
