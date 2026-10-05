@@ -1,4 +1,12 @@
-# Regal: Swift to Expo
+# Regal Cinemas: Swift to Expo
+
+<p align="center">
+  <img src="assets/icons/regal-swift-icon.png" width="120" align="middle" alt="Regal Swift app icon">
+  &nbsp;&nbsp;&nbsp;<b>&rarr;</b>&nbsp;&nbsp;&nbsp;
+  <img src="assets/icons/regal-expo-icon.png" width="120" align="middle" alt="Regal Expo app icon">
+</p>
+
+<p align="center"><i>Small POC of a Swift app ported to React Native with Expo.</i></p>
 
 The same "Get Tickets" feature built twice: once in **Swift / UIKit**, once in **React Native + Expo**.
 The Expo app uses Expo libraries first and keeps native code only where the platform owns the capability. That native code is the UIKit app's own `CaptureObserver`, shared as the same Swift file.
@@ -39,17 +47,17 @@ The Swift app is committed in one piece. The Expo app is committed as eight step
 
 **Release** comes from [`@expo/fingerprint`](https://docs.expo.dev/versions/latest/sdk/fingerprint/) (iOS), recorded in each commit's trailers. A changed hash means the merge needs a new native build (EAS Build + store). An unchanged hash means it ships as an OTA update (EAS Update).
 
-| # | PR | Why | Release | Size | Review focus |
-|---|---|---|---|---|---|
-| 0 | [Swift app + TicketKitCore](https://github.com/gg-ballin/regal-swift-to-expo/commit/f303c634818759e42f25c10a0cd3d5868b2687cd) | The reference behavior | App Store | +4303 | Baseline, not part of the port |
-| 1 | [Scaffold + native baseline](https://github.com/gg-ballin/regal-swift-to-expo/commit/34bc142beb6fe5b15bbe3cdd381945c4cec7450a) | Ship every native library in one binary | **Native build** `97f31b2` | +330 | Conventions, routing, dependency choices |
-| 2 | [Data contract](https://github.com/gg-ballin/regal-swift-to-expo/commit/130ef94ce099d47238b4eade0ce8019234dbe50e) | Validate data at the boundary | OTA `97f31b2` | +247 | zod schemas, repository seam |
-| 3 | [Domain rules + store](https://github.com/gg-ballin/regal-swift-to-expo/commit/d84d516217996a4cb2e15aae52b2767e00843bc5) | Money and seat rules as pure functions | OTA `97f31b2` | +706 | Rules, what persists and what doesn't |
-| 4 | [Movie detail](https://github.com/gg-ballin/regal-swift-to-expo/commit/904d2dc1cb513fb3d31e65d2d2efe6213fd45670) | Entry screen, list pattern | OTA `97f31b2` | +725 | Row union, IDs-only navigation |
-| 5 | [Seat selection](https://github.com/gg-ballin/regal-swift-to-expo/commit/106c1a9fa8880d8dc900651b5da2038a13129241) | 120 seats, instant taps | OTA `97f31b2` | +592 | Per-cell selectors, haptics, a11y |
-| 6 | [Ticket (JS only)](https://github.com/gg-ballin/regal-swift-to-expo/commit/3cd1d3607a45066f03181683847285327daa942e) | Offline QR, brightness, screenshot alert | OTA `97f31b2` | +656 | Focus-scoped side effects |
-| 7 | [ticket-kit Expo Module](https://github.com/gg-ballin/regal-swift-to-expo/commit/b93af3db64552d51693c6583fc91e76402362ce0) | The one gap Expo doesn't cover | **Native build** `f7017df` | +311 | Swift boundary, lifecycle, fallback |
-| 8 | [Ticket history + demo link](https://github.com/gg-ballin/regal-swift-to-expo/commit/926b40d98afd73a9e55271e9d5240b2ab8b41224) | Tickets survive restarts | OTA `f7017df` | +245 | Persistence, dev tooling |
+| #   | PR                                                                                                                             | Why                                      | Release                    | Size  | Review focus                             |
+| --- | ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------------- | ----- | ---------------------------------------- |
+| 0   | [Swift app + TicketKitCore](https://github.com/gg-ballin/regal-swift-to-expo/commit/f303c634818759e42f25c10a0cd3d5868b2687cd)  | The reference behavior                   | App Store                  | +4303 | Baseline, not part of the port           |
+| 1   | [Scaffold + native baseline](https://github.com/gg-ballin/regal-swift-to-expo/commit/34bc142beb6fe5b15bbe3cdd381945c4cec7450a) | Ship every native library in one binary  | **Native build** `97f31b2` | +330  | Conventions, routing, dependency choices |
+| 2   | [Data contract](https://github.com/gg-ballin/regal-swift-to-expo/commit/130ef94ce099d47238b4eade0ce8019234dbe50e)              | Validate data at the boundary            | OTA `97f31b2`              | +247  | zod schemas, repository seam             |
+| 3   | [Domain rules + store](https://github.com/gg-ballin/regal-swift-to-expo/commit/d84d516217996a4cb2e15aae52b2767e00843bc5)       | Money and seat rules as pure functions   | OTA `97f31b2`              | +706  | Rules, what persists and what doesn't    |
+| 4   | [Movie detail](https://github.com/gg-ballin/regal-swift-to-expo/commit/904d2dc1cb513fb3d31e65d2d2efe6213fd45670)               | Entry screen, list pattern               | OTA `97f31b2`              | +725  | Row union, IDs-only navigation           |
+| 5   | [Seat selection](https://github.com/gg-ballin/regal-swift-to-expo/commit/106c1a9fa8880d8dc900651b5da2038a13129241)             | 120 seats, instant taps                  | OTA `97f31b2`              | +592  | Per-cell selectors, haptics, a11y        |
+| 6   | [Ticket (JS only)](https://github.com/gg-ballin/regal-swift-to-expo/commit/3cd1d3607a45066f03181683847285327daa942e)           | Offline QR, brightness, screenshot alert | OTA `97f31b2`              | +656  | Focus-scoped side effects                |
+| 7   | [ticket-kit Expo Module](https://github.com/gg-ballin/regal-swift-to-expo/commit/b93af3db64552d51693c6583fc91e76402362ce0)     | The one gap Expo doesn't cover           | **Native build** `f7017df` | +311  | Swift boundary, lifecycle, fallback      |
+| 8   | [Ticket history + demo link](https://github.com/gg-ballin/regal-swift-to-expo/commit/926b40d98afd73a9e55271e9d5240b2ab8b41224) | Tickets survive restarts                 | OTA `f7017df`              | +245  | Persistence, dev tooling                 |
 
 **2 of 8 Expo PRs needed a native build.** PR 1 sets the native baseline. PR 7's hash changed for exactly two reasons: `modules/ticket-kit/ios` and the iOS autolinking config. Sizes exclude the lockfile and JSON fixtures.
 
@@ -123,17 +131,17 @@ cd regal-expo && npx @expo/fingerprint fingerprint:generate --platform ios   # r
 
 ## Swift to Expo, side by side
 
-| Concern | Swift (UIKit) | Expo |
-|---|---|---|
-| Navigation | Coordinator + `UINavigationController` | expo-router native stack + `NativeTabs` |
-| Route arguments | Objects in memory | IDs, rehydrated from cache or store |
-| Screen state | `@MainActor` ViewModel + `onChange` | Hook (logic) + Zustand selectors (state) |
-| Business rules | Inside ViewModels | Pure TypeScript in `src/domain` |
-| Data | `MovieRepository` + `Codable` | Same repository, zod at the boundary, React Query cache |
-| Lifecycle | `viewWillAppear` / `NotificationCenter` | `useFocusEffect` + `AppState` |
-| Brightness, haptics, screenshots | `TicketKitCore` | `expo-brightness`, `expo-haptics`, `expo-screen-capture` |
-| QR | CoreImage | `toqr` + `react-native-svg` |
-| Recording detection | `CaptureObserver` | The same `CaptureObserver`, through `ticket-kit` |
+| Concern                          | Swift (UIKit)                           | Expo                                                     |
+| -------------------------------- | --------------------------------------- | -------------------------------------------------------- |
+| Navigation                       | Coordinator + `UINavigationController`  | expo-router native stack + `NativeTabs`                  |
+| Route arguments                  | Objects in memory                       | IDs, rehydrated from cache or store                      |
+| Screen state                     | `@MainActor` ViewModel + `onChange`     | Hook (logic) + Zustand selectors (state)                 |
+| Business rules                   | Inside ViewModels                       | Pure TypeScript in `src/domain`                          |
+| Data                             | `MovieRepository` + `Codable`           | Same repository, zod at the boundary, React Query cache  |
+| Lifecycle                        | `viewWillAppear` / `NotificationCenter` | `useFocusEffect` + `AppState`                            |
+| Brightness, haptics, screenshots | `TicketKitCore`                         | `expo-brightness`, `expo-haptics`, `expo-screen-capture` |
+| QR                               | CoreImage                               | `toqr` + `react-native-svg`                              |
+| Recording detection              | `CaptureObserver`                       | The same `CaptureObserver`, through `ticket-kit`         |
 
 ## Trade-offs
 
