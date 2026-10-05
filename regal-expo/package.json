@@ -69,7 +69,10 @@
       "/node_modules/",
       "/ios/",
       "/android/"
-    ]
+    ],
+    "moduleNameMapper": {
+      "^ticket-kit$": "<rootDir>/__mocks__/ticket-kit.ts"
+    }
   },
   "private": true
 }

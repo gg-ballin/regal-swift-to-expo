@@ -1,6 +1,7 @@
 // SWIFT: no XCTest counterpart; the TicketViewController lifecycle (viewWillAppear/Disappear + NotificationCenter) is untested there.
 import { act, renderHook } from '@testing-library/react-native';
 import { AppState, type AppStateStatus } from 'react-native';
+import * as TicketKit from 'ticket-kit';
 
 import { boostBrightness, restoreBrightness } from './brightness';
 import { useTicketScreenProtection } from './useTicketScreenProtection';
@@ -24,6 +25,7 @@ jest.mock('expo-screen-capture', () => ({
   }),
 }));
 
+const mock = TicketKit as unknown as typeof import('../../../__mocks__/ticket-kit');
 const boost = jest.mocked(boostBrightness);
 const restore = jest.mocked(restoreBrightness);
 
@@ -43,12 +45,15 @@ describe('useTicketScreenProtection', () => {
 
     expect(boost).toHaveBeenCalledTimes(1);
     expect(restore).not.toHaveBeenCalled();
+    expect(mock.isCaptured).toHaveBeenCalledTimes(1);
     expect(mockScreenshotListeners.size).toBe(1);
+    expect(mock.captureListenerCount()).toBe(1);
 
     await act(async () => unmount());
 
     expect(restore).toHaveBeenCalledTimes(1);
     expect(mockScreenshotListeners.size).toBe(0);
+    expect(mock.captureListenerCount()).toBe(0);
   });
 
   test('restores when the app leaves active and re-boosts on return while focused', async () => {
@@ -60,11 +65,16 @@ describe('useTicketScreenProtection', () => {
 
     await act(async () => appStateListener?.('active'));
     expect(boost).toHaveBeenCalledTimes(1);
+    expect(mock.isCaptured).toHaveBeenCalledTimes(2);
   });
 
-  test('forwards screenshots', async () => {
+  test('tracks capture state and forwards screenshots', async () => {
     const onScreenshot = jest.fn();
-    await renderHook(() => useTicketScreenProtection(onScreenshot));
+    const { result } = await renderHook(() => useTicketScreenProtection(onScreenshot));
+    expect(result.current.isCaptured).toBe(false);
+
+    await act(async () => mock.emitCaptureChange(true));
+    expect(result.current.isCaptured).toBe(true);
 
     await act(async () => mockScreenshotListeners.forEach((listener) => listener()));
     expect(onScreenshot).toHaveBeenCalledTimes(1);

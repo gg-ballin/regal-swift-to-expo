@@ -1,6 +1,7 @@
 import { BlurView } from 'expo-blur';
 import { StyleSheet, Text, View } from 'react-native';
 import Animated, { FadeIn, FadeOut } from 'react-native-reanimated';
+import { SecureView } from 'ticket-kit';
 
 import { Icon } from '@/components/Icon';
 import { QRCode, useQRCode } from '@/components/QRCode';
@@ -35,9 +36,10 @@ export function QRSection({ payload, isCaptured }: Props) {
         accessible
         accessibilityRole="image"
         accessibilityLabel={isCaptured ? 'Ticket code hidden while the screen is being recorded' : 'Ticket QR code'}>
-        <View style={styles.qr}>
+        {/* SWIFT: TicketKitCore.SecureContainerView around qrImageView. The QR is blank in screenshots/recordings. */}
+        <SecureView style={styles.qr}>
           <QRCode code={code} size={QR_POINT_SIZE} />
-        </View>
+        </SecureView>
 
         {/* SWIFT: captureShield = UIVisualEffectView(UIBlurEffect(.systemChromeMaterialDark)) toggled via UIView.transition(.transitionCrossDissolve, 0.2). */}
         {isCaptured && (

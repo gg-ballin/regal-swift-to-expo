@@ -9,6 +9,9 @@
       ],
       "@/assets/*": [
         "./assets/*"
+      ],
+      "ticket-kit": [
+        "./modules/ticket-kit"
       ]
     }
   },
