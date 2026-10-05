@@ -1,6 +1,9 @@
+import { QueryClientProvider } from '@tanstack/react-query';
 import { DarkTheme, Stack, ThemeProvider } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
+import { useState } from 'react';
 
+import { createQueryClient } from '@/data/queries';
 import { stackScreenOptions } from '@/theme/navigation';
 import { colors } from '@/theme/theme';
 
@@ -24,13 +27,18 @@ const navigationTheme = {
 
 // SWIFT: SceneDelegate.scene(_:willConnectTo:) + AppCoordinator.start(): builds the UIWindow root once.
 export default function RootLayout() {
+  // SWIFT: root dependency injection, `AppCoordinator(window:repository: BundleMovieRepository())`.
+  const [queryClient] = useState(createQueryClient);
+
   return (
-    // SWIFT: window.overrideUserInterfaceStyle = .dark + window.tintColor = Theme.Color.primary.
-    <ThemeProvider value={navigationTheme}>
-      <StatusBar style="light" />
-      <Stack screenOptions={stackScreenOptions}>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      </Stack>
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      {/* SWIFT: window.overrideUserInterfaceStyle = .dark + window.tintColor = Theme.Color.primary. */}
+      <ThemeProvider value={navigationTheme}>
+        <StatusBar style="light" />
+        <Stack screenOptions={stackScreenOptions}>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        </Stack>
+      </ThemeProvider>
+    </QueryClientProvider>
   );
 }

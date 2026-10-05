@@ -1,0 +1,11 @@
+{
+  "id": "the-social-reckoning",
+  "title": "The Social Reckoning",
+  "rating": "R",
+  "runtimeMinutes": 112,
+  "posterURL": "https://picsum.photos/seed/social-reckoning/400/600",
+  "genres": ["Drama", "Thriller"],
+  "director": "Aaron Sorkin",
+  "cast": ["Jeremy Strong", "Mikey Madison", "Jeremy Allen White"],
+  "synopsis": "A whistleblower inside the world's most powerful social network races to expose what the company knew, and the cost of staying silent."
+}
