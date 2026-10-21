@@ -1,7 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
-import { useEffect, type ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { MovieCarousel } from '@/components/MovieCarousel';
+import { ReleaseWindowPicker } from '@/components/ReleaseWindowPicker';
 import { EmptyState, ErrorState, LoadingState } from '@/components/states';
 import { useMoviesCarousel } from '@/context/MoviesCarouselContext';
 import { DEFAULT_WINDOW_START, formatReleaseDate, rangeFromStart } from '@/domain/releaseWindow';
@@ -10,7 +11,8 @@ import { colors, spacing, typography } from '@/theme';
 
 export default function MoviesScreen() {
   const { activeMovie, activeIndex, setActiveMovie } = useMoviesCarousel();
-  const range = rangeFromStart(DEFAULT_WINDOW_START);
+  const [start, setStart] = useState(DEFAULT_WINDOW_START);
+  const range = rangeFromStart(start);
   const { data, isPending, isError, error, refetch } = useQuery({
     queryKey: ['movies', range],
     queryFn: () => movieRepository.movies(range),
@@ -46,6 +48,7 @@ export default function MoviesScreen() {
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
       <Text style={styles.title}>Coming Soon</Text>
+      <ReleaseWindowPicker start={start} onChangeStart={setStart} />
       {results}
     </ScrollView>
   );
