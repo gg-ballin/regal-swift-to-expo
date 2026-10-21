@@ -3,6 +3,7 @@ import { DarkTheme, Stack, ThemeProvider } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { movieDetailHeaderOptions } from '@/components/RegalHeader';
+import { MoviesCarouselProvider } from '@/context/MoviesCarouselContext';
 import { colors } from '@/theme';
 
 const navigationTheme = {
@@ -28,13 +29,15 @@ export default function RootLayout() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider value={navigationTheme}>
-        <StatusBar style="light" />
-        <Stack screenOptions={{ contentStyle: { backgroundColor: colors.background } }}>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="movie/[id]" options={movieDetailHeaderOptions} />
-        </Stack>
-      </ThemeProvider>
+      <MoviesCarouselProvider>
+        <ThemeProvider value={navigationTheme}>
+          <StatusBar style="light" />
+          <Stack screenOptions={{ contentStyle: { backgroundColor: colors.background } }}>
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            <Stack.Screen name="movie/[id]" options={movieDetailHeaderOptions} />
+          </Stack>
+        </ThemeProvider>
+      </MoviesCarouselProvider>
     </QueryClientProvider>
   );
 }
