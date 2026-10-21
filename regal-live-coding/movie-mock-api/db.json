@@ -1,0 +1,976 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Zootopia 2",
+      "primary_release_date": "2026-01-09",
+      "poster_path": "/images/1.png",
+      "overview": "Officers Judy Hopps and Nick Wilde face their biggest case yet when a wave of mysterious disappearances threatens the harmony of Zootopia.",
+      "vote_average": 7.6,
+      "backdrop_path": "/images/backdrop_1.jpg",
+      "genres": [
+        "Animation",
+        "Family",
+        "Comedy",
+        "Adventure"
+      ],
+      "director": "Jared Bush, Byron Howard",
+      "cast": [
+        "Ginnifer Goodwin",
+        "Jason Bateman",
+        "Ke Huy Quan",
+        "Shakira",
+        "Andy Samberg"
+      ],
+      "runtime": 108,
+      "rating": "PG",
+      "tagline": "Return to Zootopia for a movie event that will make hisssstory.",
+      "plot_summary": "Officers Judy Hopps and Nick Wilde, now full partners in the ZPD, face their biggest challenge yet when a mysterious reptilian newcomer named Gary De'Snake arrives in Zootopia. When a wave of disappearances threatens the harmony of the city, Judy and Nick must go undercover in uncharted districts to unravel a conspiracy that could shatter the fragile peace between predator and prey. Along the way, their partnership is tested as they confront new dangers and discover that the line between friend and foe is thinner than they ever imagined."
+    },
+    {
+      "id": 2,
+      "title": "Greenland 2: Migration",
+      "primary_release_date": "2026-01-09",
+      "poster_path": "/images/2.png",
+      "overview": "The Garrity family joins survivors migrating to a new civilisation in Greenland, only to face fresh global threats that put humanity's second chance at risk.",
+      "vote_average": 6.8,
+      "backdrop_path": "/images/backdrop_2.jpg",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Science Fiction"
+      ],
+      "director": "Ric Roman Waugh",
+      "cast": [
+        "Gerard Butler",
+        "Morena Baccarin",
+        "Roman Griffin Davis",
+        "Tommie Earl Jenkins"
+      ],
+      "runtime": 98,
+      "rating": "PG-13",
+      "tagline": "Survival was just the beginning.",
+      "plot_summary": "Years after surviving the devastating comet impact that wiped out most of civilization, the Garrity family emerges from a Greenland bunker to find the world utterly changed. Joining a convoy of survivors migrating across a devastated Europe in search of a rumored safe haven, they face treacherous new threats including rogue militias, toxic storms, and dwindling resources. As alliances form and fracture along the dangerous journey, John Garrity must decide how far he will go to protect his family in a world where trust is the scarcest commodity of all."
+    },
+    {
+      "id": 3,
+      "title": "28 Years Later: The Bone Temple",
+      "primary_release_date": "2026-01-16",
+      "poster_path": "/images/3.png",
+      "overview": "In the third chapter of the 28 Days Later saga, a group of survivors ventures deep into a quarantine zone and discovers a terrifying new mutation of the rage virus.",
+      "vote_average": 7.1,
+      "backdrop_path": "/images/backdrop_3.jpg",
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "director": "Nia DaCosta",
+      "cast": [
+        "Ralph Fiennes",
+        "Jack O'Connell",
+        "Alfie Williams",
+        "Erin Kellyman"
+      ],
+      "runtime": 109,
+      "rating": "R",
+      "tagline": "Rage never dies.",
+      "plot_summary": "Twenty-eight years after the original outbreak of the Rage Virus, Britain remains a quarantine zone ruled by feral infected and brutal warlords. Dr. Kelson, a reclusive scientist, discovers a shocking connection to the Alpha Infected known as Samson, while a young survivor named Spike is drawn into the violent cult of Sir Jimmy Crystal. As these lives converge at a mysterious structure known as the Bone Temple, the survivors must decide whether humanity's last hope lies in fighting the infected or confronting the monsters that humans have become."
+    },
+    {
+      "id": 4,
+      "title": "All You Need Is Kill",
+      "primary_release_date": "2026-01-16",
+      "poster_path": "/images/4.png",
+      "overview": "A soldier caught in a time loop fighting alien invaders is recruited by a special unit with the same ability, together becoming Earth's last hope to break the cycle and end the war.",
+      "vote_average": 7.4,
+      "backdrop_path": "/images/backdrop_4.jpg",
+      "genres": [
+        "Science Fiction",
+        "Action",
+        "Thriller"
+      ],
+      "director": "Kenichiro Akimoto",
+      "cast": [
+        "Ai Mikami",
+        "Natsuki Hanae",
+        "Kana Hanazawa"
+      ],
+      "runtime": 82,
+      "rating": "PG-13",
+      "tagline": "Break the loop or lose the war.",
+      "plot_summary": "In a world overrun by alien invaders known as Mimics, a young soldier named Keiji is killed in his first battle — only to wake up and relive the same day again and again. Trapped in a seemingly endless time loop, he discovers that a legendary warrior named Rita possesses the same ability and together they train to become Earth's deadliest fighting force. As Keiji grows from terrified recruit to hardened combatant, he uncovers the true nature of the loop and the devastating sacrifice required to break it and end the alien war for good."
+    },
+    {
+      "id": 5,
+      "title": "Hamnet",
+      "primary_release_date": "2026-01-16",
+      "poster_path": "/images/5.png",
+      "overview": "The story of Agnes, wife of a young glover turned playwright named William Shakespeare, and the short life of their son whose death inspired the greatest work of the English language.",
+      "vote_average": 7.8,
+      "backdrop_path": "/images/backdrop_5.jpg",
+      "genres": [
+        "Drama",
+        "History",
+        "Romance",
+        "Biography"
+      ],
+      "director": "Chloe Zhao",
+      "cast": [
+        "Jessie Buckley",
+        "Paul Mescal",
+        "Emily Watson",
+        "Joe Alwyn"
+      ],
+      "runtime": 126,
+      "rating": "PG-13",
+      "tagline": "Before the masterpiece, there was a family.",
+      "plot_summary": "In 1596 Stratford-upon-Avon, Agnes Shakespeare tends to her family while her husband William is consumed by his rising career in London's theatre world. When their eleven-year-old twin son Hamnet falls gravely ill with the plague, Agnes fights desperately to save him through her knowledge of herbal medicine, while Will remains distant and unaware. The devastating loss that follows tears the family apart and reshapes William forever, ultimately inspiring what many consider the greatest work of the English language. Through Agnes's eyes, the film explores grief, resilience, and the hidden cost of genius."
+    },
+    {
+      "id": 6,
+      "title": "Return to Silent Hill",
+      "primary_release_date": "2026-01-23",
+      "poster_path": "/images/6.png",
+      "overview": "A man returns to the perpetually fog-shrouded town of Silent Hill in search of his missing wife, confronting the twisted manifestations of his own darkest guilt.",
+      "vote_average": 6.4,
+      "backdrop_path": "/images/backdrop_6.jpg",
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Drama"
+      ],
+      "director": "Christophe Gans",
+      "cast": [
+        "Jeremy Irvine",
+        "Hannah Emily Anderson",
+        "Evie Templeton"
+      ],
+      "runtime": 106,
+      "rating": "R",
+      "tagline": "The fog remembers.",
+      "plot_summary": "James Sunderland receives a letter from his deceased wife Mary, beckoning him to return to the perpetually fog-shrouded town of Silent Hill. Desperate for answers, he enters the abandoned town and descends into its nightmarish Otherworld, where twisted creatures born from guilt and repressed memory stalk every corridor. As reality fractures around him, James encounters other lost souls each confronting their own sins, and must face the terrifying Pyramid Head — a relentless executioner that embodies his darkest shame. The deeper he ventures, the more he questions whether the monsters are hunting him, or if he has been one of them all along."
+    },
+    {
+      "id": 7,
+      "title": "Mercy",
+      "primary_release_date": "2026-01-23",
+      "poster_path": "/images/7.png",
+      "overview": "After witnessing something they were never meant to see, a family finds themselves hunted across rural America by a relentless and methodical killer.",
+      "vote_average": 6.2,
+      "backdrop_path": "/images/backdrop_7.jpg",
+      "genres": [
+        "Thriller",
+        "Horror"
+      ],
+      "director": "Timur Bekmambetov",
+      "cast": [
+        "Chris Pratt",
+        "Rebecca Ferguson",
+        "Kali Reis",
+        "Annabelle Wallis"
+      ],
+      "runtime": 100,
+      "rating": "R",
+      "tagline": "Your verdict is final.",
+      "plot_summary": "In a near-future Los Angeles where crime is out of control, Detective Chris Raven is accused of murdering his wife and placed on trial in a revolutionary AI-run court system. Given just ninety minutes to prove his innocence before an advanced AI judge, Raven must piece together fragmented surveillance footage and digital evidence while confronting the possibility that someone has framed him using the very technology meant to deliver justice. As the clock ticks down, the line between man and machine, truth and fabrication, blurs in a tense race against an algorithm that has already decided his fate."
+    },
+    {
+      "id": 8,
+      "title": "Iron Lung",
+      "primary_release_date": "2026-01-30",
+      "poster_path": "/images/8.png",
+      "overview": "A deep-sea research team drilling near a hydrothermal vent awakens an ancient entity that feeds on human consciousness, trapping them miles below the surface.",
+      "vote_average": 6.5,
+      "backdrop_path": "/images/backdrop_8.jpg",
+      "genres": [
+        "Horror",
+        "Science Fiction"
+      ],
+      "director": "Mark Fischbach",
+      "cast": [
+        "Mark Fischbach",
+        "Caroline Rose Kaplan",
+        "Troy Baker"
+      ],
+      "runtime": 125,
+      "rating": "R",
+      "tagline": "Beneath the surface, something listens.",
+      "plot_summary": "After a catastrophic cosmic event known as the Quiet Rapture extinguishes every star in the universe, the remnants of humanity cling to survival on scattered moons and space stations. A convicted criminal named Simon is given an impossible mission: pilot a cramped, welded-shut submarine through the blood-red ocean of a barren moon to photograph whatever lies in its depths. Alone in the suffocating darkness with only a radio connection to his handlers, Simon discovers that something ancient and intelligent lurks below — and it has been waiting for someone to come looking."
+    },
+    {
+      "id": 9,
+      "title": "Send Help",
+      "primary_release_date": "2026-01-30",
+      "poster_path": "/images/9.png",
+      "overview": "A struggling social media influencer accidentally goes viral after a joke distress video is mistaken for real — and now real rescue services, paparazzi, and a deranged fan are all on the way.",
+      "vote_average": 6.7,
+      "backdrop_path": "/images/backdrop_9.jpg",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "director": "Laura Terruso",
+      "cast": [
+        "Maya Rudolph",
+        "David Oyelowo",
+        "Bowen Yang",
+        "Awkwafina"
+      ],
+      "runtime": 96,
+      "rating": "PG-13",
+      "tagline": "Going viral has consequences.",
+      "plot_summary": "When struggling social-media influencer Dani posts a joke distress video from a remote cabin, the last thing she expects is for it to go viral as a real emergency. Within hours, rescue services, news helicopters, paparazzi, and a dangerously obsessive superfan are all converging on her location. What begins as a comedy of errors escalates into genuine peril as Dani and her skeptical producer must navigate an absurd media circus while dealing with very real dangers. The film is a sharp satire of internet fame, parasocial relationships, and what happens when the algorithm decides your fate."
+    },
+    {
+      "id": 10,
+      "title": "Dracula",
+      "primary_release_date": "2026-02-06",
+      "poster_path": "/images/10.png",
+      "overview": "A stylish and visceral reimagining of Bram Stoker's classic tale, following Count Dracula's arrival in Victorian London and the desperate race to stop him.",
+      "vote_average": 7,
+      "backdrop_path": "/images/backdrop_10.jpg",
+      "genres": [
+        "Horror",
+        "Fantasy",
+        "Romance",
+        "Drama"
+      ],
+      "director": "Luc Besson",
+      "cast": [
+        "Caleb Landry Jones",
+        "Christoph Waltz",
+        "Zoe Bleu"
+      ],
+      "runtime": 129,
+      "rating": "R",
+      "tagline": "Love is eternal. So is the darkness.",
+      "plot_summary": "A stylish and visceral reimagining of Bram Stoker's classic tale, the film follows Prince Vlad of Wallachia who, after losing his beloved wife Elisabeta to a brutal siege, renounces God and is cursed with immortality as the vampire Dracula. Centuries later in Victorian London, he encounters Mina Murray — the spitting image of his lost love — and becomes consumed by an obsession that threatens to destroy everyone around him. As a determined priest and a small band of allies race to stop the ancient predator, Dracula must confront the question of whether eternal life without love is a gift or the cruelest punishment of all."
+    },
+    {
+      "id": 11,
+      "title": "The Strangers: Chapter 3",
+      "primary_release_date": "2026-02-06",
+      "poster_path": "/images/11.png",
+      "overview": "The horrifying conclusion to the Strangers trilogy — the masked tormentors are finally unmasked, and their origins are more disturbing than anyone imagined.",
+      "vote_average": 6.3,
+      "backdrop_path": "/images/backdrop_11.jpg",
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "director": "Renny Harlin",
+      "cast": [
+        "Madelaine Petsch",
+        "Froy Gutierrez",
+        "Rachel Shenton"
+      ],
+      "runtime": 101,
+      "rating": "R",
+      "tagline": "Every face hides a monster.",
+      "plot_summary": "The horrifying conclusion to the Strangers trilogy finally pulls back the masks of the tormentors who have terrorized innocent families for years. When a group of friends rents a secluded farmhouse for a reunion weekend, the familiar knock at the door signals the beginning of a night of unrelenting terror. But this time the victims fight back, and as the night wears on, the identities and twisted motivations of the Strangers are revealed to be more personal and more disturbing than anyone imagined. The film delivers a brutal and emotional finale that redefines everything audiences thought they knew about the masked killers."
+    },
+    {
+      "id": 12,
+      "title": "Wuthering Heights",
+      "primary_release_date": "2026-02-13",
+      "poster_path": "/images/12.png",
+      "overview": "A passionate and destructive love story between Catherine Earnshaw and the orphan Heathcliff, whose bond forged on the Yorkshire moors consumes two generations.",
+      "vote_average": 7.5,
+      "backdrop_path": "/images/backdrop_12.jpg",
+      "genres": [
+        "Romance",
+        "Drama",
+        "History"
+      ],
+      "director": "Emerald Fennell",
+      "cast": [
+        "Margot Robbie",
+        "Jacob Elordi",
+        "Hong Chau",
+        "Shazad Latif"
+      ],
+      "runtime": 136,
+      "rating": "R",
+      "tagline": "Love is a force of destruction.",
+      "plot_summary": "On the windswept Yorkshire moors of 19th-century England, the orphan Heathcliff is taken in by the Earnshaw family, where he forges an all-consuming bond with the fierce and passionate Catherine. Their love, wild and untamable, is thwarted by class, pride, and cruelty — setting in motion a cycle of obsession and revenge that consumes two generations. Emerald Fennell's bold adaptation brings a modern visual sensibility to Emily Bronte's Gothic masterpiece, exploring the destructive power of love that refuses to die even beyond the grave. The film is a maximalist, sexually charged, and visually striking reimagining of the classic novel."
+    },
+    {
+      "id": 13,
+      "title": "Cold Storage",
+      "primary_release_date": "2026-02-13",
+      "poster_path": "/images/13.png",
+      "overview": "A retired bioterrorism expert is pulled back into the field when a dormant viral agent locked in a government facility is stolen by a group with catastrophic intentions.",
+      "vote_average": 6.9,
+      "backdrop_path": "/images/backdrop_13.jpg",
+      "genres": [
+        "Thriller",
+        "Action"
+      ],
+      "director": "Chris Wedge",
+      "cast": [
+        "Idris Elba",
+        "Oscar Isaac",
+        "Sandra Oh"
+      ],
+      "runtime": 107,
+      "rating": "R",
+      "tagline": "Some threats never thaw.",
+      "plot_summary": "Retired bioterrorism expert Roberto Diaz has spent years putting the horrors of biological warfare behind him. But when a dormant viral agent locked in a top-secret government cold-storage facility is stolen by a well-funded extremist group, he is pulled back into the field for one last mission. Racing across continents with a young CDC analyst, Diaz must track down the stolen pathogen before it is weaponized and unleashed on a major city. The clock is ticking, old enemies resurface, and Diaz discovers that the conspiracy reaches far deeper into the government than anyone suspected."
+    },
+    {
+      "id": 14,
+      "title": "Blades of the Guardians",
+      "primary_release_date": "2026-02-17",
+      "poster_path": "/images/14.png",
+      "overview": "In ancient China, a lone swordsman protecting grain shipments from bandits uncovers a conspiracy that stretches from the imperial court to a hidden martial arts society.",
+      "vote_average": 7.2,
+      "backdrop_path": "/images/backdrop_14.jpg",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "director": "Lu Yang",
+      "cast": [
+        "Xiao Zhan",
+        "Zhao Lusi",
+        "Wu Jing",
+        "Fan Bingbing"
+      ],
+      "runtime": 132,
+      "rating": "PG-13",
+      "tagline": "Honor has a blade.",
+      "plot_summary": "In the twilight years of the Tang Dynasty, a lone swordsman named Dao Ma is hired to protect vital grain shipments from ruthless bandits preying on starving provinces. Along the perilous route, he uncovers a conspiracy that stretches from the imperial court to a hidden martial arts society bent on seizing the throne. Joined by a ragtag band of fighters — each with their own code of honor and dark past — Dao Ma must navigate deadly political intrigue and breathtaking combat to expose the true enemy before the empire collapses into chaos."
+    },
+    {
+      "id": 15,
+      "title": "EPiC: Elvis Presley in Concert",
+      "primary_release_date": "2026-02-20",
+      "poster_path": "/images/15.png",
+      "overview": "A groundbreaking concert film that uses AI and archival footage to bring Elvis Presley back to the stage in an immersive, full-length live performance experience.",
+      "vote_average": 7.9,
+      "backdrop_path": "/images/backdrop_15.jpg",
+      "genres": [
+        "Documentary",
+        "Music"
+      ],
+      "director": "Baz Luhrmann",
+      "cast": [
+        "Austin Butler",
+        "Tom Hanks"
+      ],
+      "runtime": 95,
+      "rating": "PG",
+      "tagline": "The King returns to the stage.",
+      "plot_summary": "A groundbreaking concert film that uses cutting-edge AI technology and meticulously restored archival footage to bring Elvis Presley back to the stage in an immersive, full-length live performance experience. Audiences are transported through the defining eras of the King of Rock and Roll's career — from his electrifying early Sun Records sessions through the '68 Comeback Special to his legendary Las Vegas residency. Interwoven with the performances are intimate behind-the-scenes moments and interviews that reveal the man behind the myth, creating a concert experience that transcends time and technology."
+    },
+    {
+      "id": 16,
+      "title": "The Bluff",
+      "primary_release_date": "2026-02-25",
+      "poster_path": "/images/16.png",
+      "overview": "A reformed 18th-century pirate and her family are forced back into a deadly game when her island is seized by a ruthless naval captain seeking leverage over her past.",
+      "vote_average": 7.3,
+      "backdrop_path": "/images/backdrop_16.jpg",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama"
+      ],
+      "director": "Frank E. Flowers",
+      "cast": [
+        "Priyanka Chopra Jonas",
+        "Karl Urban",
+        "Ismael Cruz Cordova"
+      ],
+      "runtime": 113,
+      "rating": "PG-13",
+      "tagline": "The past always catches up.",
+      "plot_summary": "In the 18th-century Caribbean, former pirate Ercell has built a quiet new life with her family on a remote island, far from the blood-soaked decks of her past. When a ruthless British naval captain seizes her island and takes her family hostage, Ercell is forced to strike a deadly bargain: retrieve a legendary treasure she once helped hide, or watch everything she loves be destroyed. Sailing back into the treacherous waters she thought she had left behind, Ercell must confront old allies, older enemies, and the version of herself she tried so hard to bury."
+    },
+    {
+      "id": 17,
+      "title": "Scream 7",
+      "primary_release_date": "2026-02-27",
+      "poster_path": "/images/17.png",
+      "overview": "Ghostface returns with a new set of victims bound by a dark secret buried deep in Hollywood history, forcing survivors old and new into a deadly game of whodunit.",
+      "vote_average": 6.8,
+      "backdrop_path": "/images/backdrop_17.jpg",
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
+      "director": "Kevin Williamson",
+      "cast": [
+        "Neve Campbell",
+        "Courteney Cox",
+        "Isabel May",
+        "Mason Gooding",
+        "Matthew Lillard"
+      ],
+      "runtime": 114,
+      "rating": "R",
+      "tagline": "It's always someone you know.",
+      "plot_summary": "Sidney Prescott has finally found peace in the quiet town of Pine Grove, Indiana, running a coffee shop and raising her teenage daughter Tatum with her husband, a local police officer. But when a new Ghostface killer emerges — one who seems to know the darkest secrets of Hollywood's horror-obsessed elite — the nightmare begins again. As bodies pile up and old friends are drawn back into the fray, Sidney must protect her daughter while unraveling a mystery that connects the present killings to buried secrets from the franchise's very first murders in Woodsboro."
+    },
+    {
+      "id": 18,
+      "title": "Hoppers",
+      "primary_release_date": "2026-03-05",
+      "poster_path": "/images/18.png",
+      "overview": "A spirited young kangaroo leaves the Australian outback and embarks on a globe-spanning journey full of wonder and danger to find the family she has always dreamed of.",
+      "vote_average": 7.7,
+      "backdrop_path": "/images/backdrop_18.jpg",
+      "genres": [
+        "Animation",
+        "Family",
+        "Adventure",
+        "Comedy",
+        "Science Fiction"
+      ],
+      "director": "Daniel Chong",
+      "cast": [
+        "Piper Curda",
+        "Bobby Moynihan",
+        "Jon Hamm",
+        "Kathy Najimy",
+        "Meryl Streep"
+      ],
+      "runtime": 104,
+      "rating": "PG",
+      "tagline": "See the world through different eyes.",
+      "plot_summary": "Nineteen-year-old animal lover Mabel has always dreamed of communicating with the creatures she adores. When a brilliant scientist offers her the chance to test revolutionary mind-hopping technology that can transfer human consciousness into lifelike robotic animals, Mabel leaps at the opportunity. Inhabiting a robotic beaver named King George, she infiltrates the animal world and discovers that a greedy mayor is plotting to destroy a vital habitat for a massive development project. Rallying an unlikely coalition of animals and humans, Mabel must use her unique perspective to save the ecosystem before it's too late."
+    },
+    {
+      "id": 19,
+      "title": "The Bride!",
+      "primary_release_date": "2026-03-06",
+      "poster_path": "/images/19.png",
+      "overview": "When Frankenstein's monster demands a companion, a brilliant but tormented scientist creates a bride — and unleashes a chain of events that neither scientist nor creation can control.",
+      "vote_average": 7.4,
+      "backdrop_path": "/images/backdrop_19.jpg",
+      "genres": [
+        "Horror",
+        "Drama",
+        "Comedy",
+        "Fantasy"
+      ],
+      "director": "Maggie Gyllenhaal",
+      "cast": [
+        "Jessie Buckley",
+        "Christian Bale",
+        "Annette Bening",
+        "Penelope Cruz",
+        "Peter Sarsgaard"
+      ],
+      "runtime": 126,
+      "rating": "R",
+      "tagline": "She was made for this world. Now she'll remake it.",
+      "plot_summary": "Set in 1930s Chicago, Frankenstein's monster — lonely after decades of wandering the earth — convinces the brilliant Dr. Euphronius to create a companion for him. They reanimate a murdered woman named Ida, who awakens with a fierce intelligence and an insatiable hunger for life. As Ida's consciousness merges with the spirit of Mary Shelley herself, the Bride embarks on a Bonnie-and-Clyde-style rampage across the city, challenging the men who created her and the society that tried to define her. Maggie Gyllenhaal's bold, genre-bending film is part gothic romance, part gangster epic, and entirely its own creation."
+    },
+    {
+      "id": 20,
+      "title": "Red Riding",
+      "primary_release_date": "2026-03-13",
+      "poster_path": "/images/20.png",
+      "overview": "A tenacious detective reopens a cold case in the Yorkshire valleys and slowly unravels a decades-old conspiracy connecting corrupt police, local power brokers, and a series of unsolved murders.",
+      "vote_average": 7.6,
+      "backdrop_path": "/images/backdrop_20.jpg",
+      "genres": [
+        "Crime",
+        "Thriller",
+        "Drama"
+      ],
+      "director": "David Fincher",
+      "cast": [
+        "Tom Hardy",
+        "Rebecca Ferguson",
+        "Mark Rylance"
+      ],
+      "runtime": 148,
+      "rating": "R",
+      "tagline": "The truth was buried with them.",
+      "plot_summary": "In the rain-soaked valleys of northern England, tenacious detective Catherine Chambers reopens a cold case that the local police have kept sealed for thirty years. As she digs into a series of unsolved murders of young women, she slowly unravels a decades-old conspiracy connecting corrupt police officers, powerful local industrialists, and a web of silence maintained by fear. With each revelation, Catherine puts herself in greater danger, discovering that the people sworn to protect the community are the very ones who destroyed it. The film is a slow-burn procedural that exposes how power corrupts and justice is denied."
+    },
+    {
+      "id": 21,
+      "title": "Reminders of Him",
+      "primary_release_date": "2026-03-13",
+      "poster_path": "/images/21.png",
+      "overview": "After serving time for a tragic accident that shattered her world, a young woman returns to her hometown to rebuild her life and fight to reconnect with the daughter she has never known.",
+      "vote_average": 7.8,
+      "backdrop_path": "/images/backdrop_21.jpg",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "director": "Justin Baldoni",
+      "cast": [
+        "Florence Pugh",
+        "Josh Hartnett",
+        "Harriet Walter"
+      ],
+      "runtime": 118,
+      "rating": "PG-13",
+      "tagline": "Some bonds can't be broken.",
+      "plot_summary": "After serving five years in prison for a tragic accident, Kenna Rowan returns to her small Texas hometown determined to rebuild her life and reconnect with the four-year-old daughter she has never been allowed to know. But the community hasn't forgiven her, and her late boyfriend's parents — who have been raising the child — will do anything to keep Kenna away. Finding an unlikely ally in the local bar owner Ledger, Kenna must prove to a town consumed by grief and judgment that people can change, and that a mother's love is worth fighting for even when the whole world stands against her."
+    },
+    {
+      "id": 22,
+      "title": "Undertone",
+      "primary_release_date": "2026-03-13",
+      "poster_path": "/images/22.png",
+      "overview": "A rising classical musician discovers that her late mentor concealed a dark and criminal secret — one that powerful people will kill to keep buried.",
+      "vote_average": 6.9,
+      "backdrop_path": "/images/backdrop_22.jpg",
+      "genres": [
+        "Thriller",
+        "Mystery"
+      ],
+      "director": "Celine Sciamma",
+      "cast": [
+        "Saoirse Ronan",
+        "Adam Driver",
+        "Nina Hoss"
+      ],
+      "runtime": 110,
+      "rating": "PG-13",
+      "tagline": "Every note hides a secret.",
+      "plot_summary": "Rising classical pianist Elise Hartmann is on the verge of international stardom when she discovers that her recently deceased mentor, the celebrated conductor Viktor Brandt, harbored a dark criminal secret tied to the art world's most powerful collectors. As Elise digs deeper into Viktor's hidden past, she realizes that the people who kept his secret are willing to kill to ensure it stays buried. Caught between her devotion to music and her need for the truth, Elise must decide how much she is willing to risk to expose the man who made her career — and the dangerous forces that protected him."
+    },
+    {
+      "id": 23,
+      "title": "Project Hail Mary",
+      "primary_release_date": "2026-03-20",
+      "poster_path": "/images/23.png",
+      "overview": "An astronaut wakes up alone on a spacecraft with no memory of who he is or how he got there — and gradually realises he is Earth's last hope against an extinction-level cosmic event.",
+      "vote_average": 8.4,
+      "backdrop_path": "/images/backdrop_23.jpg",
+      "genres": [
+        "Science Fiction",
+        "Adventure",
+        "Drama"
+      ],
+      "director": "Phil Lord, Christopher Miller",
+      "cast": [
+        "Ryan Gosling",
+        "Sandra Huller",
+        "Milana Vayntrub"
+      ],
+      "runtime": 156,
+      "rating": "PG-13",
+      "tagline": "Alone in space. Earth's last chance.",
+      "plot_summary": "Astronaut Ryland Grace wakes up millions of miles from Earth with no memory of who he is, how he got there, or why his two crewmates are dead beside him. As fragments of memory slowly return, he realizes he is humanity's last hope: sent on a desperate mission to an alien star system to find a solution to a mysterious organism called Astrophage that is dimming Earth's sun and threatening all life. Stranded and alone, Grace makes an extraordinary discovery — an alien ship and its sole occupant, a creature he names Rocky — and together they forge an unlikely friendship that may be the key to saving both their worlds."
+    },
+    {
+      "id": 24,
+      "title": "Ready or Not 2",
+      "primary_release_date": "2026-03-20",
+      "poster_path": "/images/24.png",
+      "overview": "Grace barely survived the Le Domas dynasty once. Now a distant branch of the family has found her, and the deadly game begins again — this time with new rules.",
+      "vote_average": 7.1,
+      "backdrop_path": "/images/backdrop_24.jpg",
+      "genres": [
+        "Horror",
+        "Comedy",
+        "Thriller"
+      ],
+      "director": "Matt Bettinelli-Olpin, Tyler Gillett",
+      "cast": [
+        "Samara Weaving",
+        "Kathryn Newton",
+        "Elijah Wood",
+        "Sarah Michelle Gellar"
+      ],
+      "runtime": 106,
+      "rating": "R",
+      "tagline": "New game. New rules.",
+      "plot_summary": "Grace barely survived her wedding night with the murderous Le Domas dynasty, but her nightmare is far from over. When her estranged sister Faith shows up with a warning, Grace discovers that four powerful rival families are competing for the \"High Seat\" of a secret global council — and the sisters are the prey in a new, even deadlier game. Armed with hard-won survival instincts and a darkly comic refusal to die, Grace and Faith must outwit assassins, navigate family betrayal, and dismantle a centuries-old power structure before sunrise. The rules have changed, but the game is still murder."
+    },
+    {
+      "id": 25,
+      "title": "The Super Mario Galaxy Movie",
+      "primary_release_date": "2026-04-01",
+      "poster_path": "/images/25.png",
+      "overview": "Mario and Luigi blast off into outer space to rescue Princess Peach from Bowser's galaxy fortress, hurtling through dazzling star systems and battling cosmic enemies.",
+      "vote_average": 7.9,
+      "backdrop_path": "/images/backdrop_25.jpg",
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Comedy",
+        "Family",
+        "Fantasy"
+      ],
+      "director": "Aaron Horvath, Michael Jelenic",
+      "cast": [
+        "Chris Pratt",
+        "Anya Taylor-Joy",
+        "Charlie Day",
+        "Jack Black",
+        "Brie Larson"
+      ],
+      "runtime": 98,
+      "rating": "PG",
+      "tagline": "Adventure is out of this world.",
+      "plot_summary": "When Bowser Jr. hatches a scheme to free his imprisoned father by harnessing the power of the Grand Stars, Mario, Luigi, Princess Peach, Toad, and Yoshi must blast off into outer space to stop him. Hurtling through dazzling star systems and battling cosmic enemies on gravity-defying planetoids, the heroes encounter the mysterious Rosalina and her adorable Luma companions aboard the Comet Observatory. As Bowser Jr. grows more powerful and the very fabric of the galaxy begins to tear apart, Mario must master new abilities and rally his friends for the most epic showdown the Mushroom Kingdom has ever faced."
+    },
+    {
+      "id": 26,
+      "title": "A Great Awakening",
+      "primary_release_date": "2026-04-03",
+      "poster_path": "/images/26.png",
+      "overview": "A charismatic evangelical preacher builds a multi-million dollar megachurch empire while his personal crisis of faith quietly threatens to tear everything he has built to the ground.",
+      "vote_average": 7.2,
+      "backdrop_path": "/images/backdrop_26.jpg",
+      "genres": [
+        "Drama"
+      ],
+      "director": "Tyler Perry",
+      "cast": [
+        "Denzel Washington",
+        "Viola Davis",
+        "Jonathan Majors"
+      ],
+      "runtime": 138,
+      "rating": "PG-13",
+      "tagline": "Faith can build an empire. Doubt can burn it down.",
+      "plot_summary": "Charismatic preacher Ezekiel Turner rises from a modest storefront church in rural Georgia to the head of a multi-million dollar megachurch empire, captivating millions with his electrifying sermons and seemingly unshakeable faith. Behind the scenes, however, a profound personal crisis threatens to unravel everything — a crisis deepened by financial scandals, family dysfunction, and the growing suspicion that the miracles his congregation believes in are carefully staged. As investigative journalists close in and his inner circle fractures, Ezekiel must confront the question he has been running from his entire life: does he truly believe?"
+    },
+    {
+      "id": 27,
+      "title": "The Killer",
+      "primary_release_date": "2026-04-05",
+      "poster_path": "/images/27.jpg",
+      "overview": "A cold-blooded professional assassin begins to unravel after a routine contract goes catastrophically wrong, forcing him to confront the human cost of a life lived without conscience.",
+      "vote_average": 7,
+      "backdrop_path": "/images/backdrop_27.jpg",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime"
+      ],
+      "director": "John Woo",
+      "cast": [
+        "Nathalie Emmanuel",
+        "Sam Worthington",
+        "Omar Sy"
+      ],
+      "runtime": 118,
+      "rating": "R",
+      "tagline": "Every contract has a cost.",
+      "plot_summary": "A cold-blooded professional assassin known only as The Killer operates with ruthless efficiency across the globe, dispatching targets without hesitation or remorse. But when a routine contract in Paris goes catastrophically wrong and an innocent bystander is caught in the crossfire, something inside her breaks. Haunted by the face of her unintended victim, The Killer begins to systematically dismantle the criminal network that hired her, even as a relentless Interpol detective closes in. What follows is a breathtaking descent into the human cost of violence — a stylish, action-packed reckoning with a life lived without conscience."
+    },
+    {
+      "id": 28,
+      "title": "The Yeti",
+      "primary_release_date": "2026-04-10",
+      "poster_path": "/images/28.png",
+      "overview": "A documentary film crew trekking deep into the Himalayas to disprove the Yeti legend discovers that the creature is devastatingly real — and it has been watching them from the start.",
+      "vote_average": 6.4,
+      "backdrop_path": "/images/backdrop_28.jpg",
+      "genres": [
+        "Horror",
+        "Adventure"
+      ],
+      "director": "Lee Cronin",
+      "cast": [
+        "John Boyega",
+        "Daisy Ridley",
+        "Mads Mikkelsen"
+      ],
+      "runtime": 102,
+      "rating": "R",
+      "tagline": "The legend is real. The danger is worse.",
+      "plot_summary": "A documentary film crew led by ambitious filmmaker Jake Marsden treks deep into the Himalayas to disprove the Yeti legend once and for all. Armed with thermal cameras, drones, and scientific skepticism, they push past the last known settlements into a region local Sherpas refuse to enter. When their equipment begins to malfunction and crew members start disappearing one by one, Jake realizes too late that the creature is devastatingly real — and it has been watching them from the start. Trapped in a frozen wilderness with no communication and no way out, the survivors must outwit a predator that has been perfecting the hunt for millennia."
+    },
+    {
+      "id": 29,
+      "title": "You, Me & Tuscany",
+      "primary_release_date": "2026-04-10",
+      "poster_path": "/images/29.png",
+      "overview": "Two strangers discover they have jointly inherited a crumbling villa in the Tuscan countryside and are forced to spend a summer together before one can buy the other out.",
+      "vote_average": 7.3,
+      "backdrop_path": "/images/backdrop_29.jpg",
+      "genres": [
+        "Romance",
+        "Comedy"
+      ],
+      "director": "Nancy Meyers",
+      "cast": [
+        "Anne Hathaway",
+        "Idris Elba",
+        "Emma Thompson"
+      ],
+      "runtime": 112,
+      "rating": "PG-13",
+      "tagline": "Some things you can't divide.",
+      "plot_summary": "Type-A New York architect Sophie and laid-back London chef Marcus discover they have jointly inherited a crumbling villa in the Tuscan countryside from a mysterious great-aunt neither knew they had. Forced to spend a summer together to renovate the property before one can buy the other out, they clash over every decision — from paint colors to olive groves to the villa's eccentric elderly neighbors. As the golden Italian summer works its magic, old wounds heal, unexpected passions ignite, and both must decide whether the life they planned is the one they actually want."
+    },
+    {
+      "id": 30,
+      "title": "Legends of the Lost Ark",
+      "primary_release_date": "2026-04-12",
+      "poster_path": "/images/30.png",
+      "overview": "A young archaeologist follows cryptic clues left by a legendary 1930s explorer to locate history's most dangerous relic — a discovery that others have already killed to prevent.",
+      "vote_average": 6.8,
+      "backdrop_path": "/images/backdrop_30.jpg",
+      "genres": [
+        "Adventure",
+        "Action",
+        "Mystery"
+      ],
+      "director": "James Mangold",
+      "cast": [
+        "Glen Powell",
+        "Lupita Nyong'o",
+        "Javier Bardem"
+      ],
+      "runtime": 128,
+      "rating": "PG-13",
+      "tagline": "History's greatest treasure. History's deadliest secret.",
+      "plot_summary": "Young archaeologist Nora Chen follows cryptic clues left by a legendary 1930s explorer to locate history's most dangerous relic — an artifact that others have killed to keep hidden for nearly a century. Her search takes her from the dusty archives of a Cairo museum to hidden temples in the Jordanian desert, always one step ahead of a ruthless private military contractor who wants the relic for its rumored supernatural power. With her mentor's journal as her only guide and a roguish local smuggler as her reluctant partner, Nora must solve ancient puzzles and survive deadly traps to reach the treasure before it falls into the wrong hands."
+    },
+    {
+      "id": 31,
+      "title": "Changing Lanes",
+      "primary_release_date": "2026-04-16",
+      "poster_path": "/images/31.png",
+      "overview": "A fender-bender on a Los Angeles freeway spirals into an all-day campaign of mutual destruction between a lawyer and a recovering addict, each holding something the other desperately needs.",
+      "vote_average": 7.1,
+      "backdrop_path": "/images/backdrop_31.jpg",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "director": "Dan Gilroy",
+      "cast": [
+        "Mahershala Ali",
+        "Oscar Isaac",
+        "Tilda Swinton"
+      ],
+      "runtime": 105,
+      "rating": "R",
+      "tagline": "One morning. Two lives. Total war.",
+      "plot_summary": "A minor fender-bender on a Los Angeles freeway on Good Friday spirals into an all-day campaign of mutual destruction between Marcus, a high-powered entertainment lawyer racing to file a crucial contract, and Devon, a recovering addict on his way to a custody hearing. When a critical document is accidentally swapped in the chaos of the accident, each man holds something the other desperately needs — and neither is willing to back down. As the day escalates from legal threats to sabotage to outright violence, both men are forced to confront the moral compromises that define their lives."
+    },
+    {
+      "id": 32,
+      "title": "Mother Mary",
+      "primary_release_date": "2026-04-17",
+      "poster_path": "/images/32.png",
+      "overview": "At the peak of her global fame, a pop superstar finds unexpected solace and a profound spiritual crisis when she strikes up an unlikely friendship with a reclusive country priest.",
+      "vote_average": 7.5,
+      "backdrop_path": "/images/backdrop_32.jpg",
+      "genres": [
+        "Drama"
+      ],
+      "director": "David Lowery",
+      "cast": [
+        "Lady Gaga",
+        "Brendan Gleeson",
+        "FKA twigs"
+      ],
+      "runtime": 120,
+      "rating": "R",
+      "tagline": "Fame is a prayer no one answers.",
+      "plot_summary": "At the peak of her global fame, pop superstar Cecilia finds herself emotionally empty despite sold-out arenas and millions of adoring fans. During a concert tour stop in a small Irish town, she stumbles into the parish of Father Thomas, a reclusive and cantankerous priest who has no idea who she is. Their unlikely friendship — built over whiskey, theological arguments, and long walks along the coast — forces both to confront their deepest fears: Cecilia's terror of being truly known, and Thomas's crisis of faith after decades of service. The film is a quiet, devastating portrait of loneliness, celebrity, and the search for meaning."
+    },
+    {
+      "id": 33,
+      "title": "The Mummy",
+      "primary_release_date": "2026-04-17",
+      "poster_path": "/images/33.png",
+      "overview": "When archaeologists unseal a long-buried Egyptian tomb, they unleash a 3,000-year-old pharaoh whose wrath — and dark magic — threatens to consume the modern world.",
+      "vote_average": 6.7,
+      "backdrop_path": "/images/backdrop_33.jpg",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Horror"
+      ],
+      "director": "Lee Cronin",
+      "cast": [
+        "Austin Butler",
+        "Lily James",
+        "Jared Leto",
+        "Russell Crowe"
+      ],
+      "runtime": 124,
+      "rating": "PG-13",
+      "tagline": "Death is only the beginning.",
+      "plot_summary": "When a team of archaeologists unseals a long-buried Egyptian tomb in the Valley of the Kings, they unknowingly awaken Imhotep — a 3,000-year-old high priest cursed with an eternity of undeath for forbidden sorcery. As Imhotep rises with terrifying power, draining the life force of those around him to restore his ancient form, adventurer Rick Gallagher and Egyptologist Evelyn Hartley must race against time to find a way to stop him. From the sun-scorched deserts of Egypt to the fog-bound streets of 1920s London, their desperate quest pits them against dark magic, deadly traps, and an enemy who has had millennia to plan his revenge."
+    },
+    {
+      "id": 34,
+      "title": "The Gardener",
+      "primary_release_date": "2026-04-17",
+      "poster_path": "/images/34.png",
+      "overview": "A new groundskeeper arrives at an isolated countryside estate with impeccable references and a quiet manner — and a sinister secret buried as deep as the garden's oldest roots.",
+      "vote_average": 6.6,
+      "backdrop_path": "/images/backdrop_34.jpg",
+      "genres": [
+        "Mystery",
+        "Thriller",
+        "Horror"
+      ],
+      "director": "Robert Eggers",
+      "cast": [
+        "Mads Mikkelsen",
+        "Florence Pugh",
+        "Cillian Murphy"
+      ],
+      "runtime": 115,
+      "rating": "R",
+      "tagline": "Everything grows from something buried.",
+      "plot_summary": "When a new groundskeeper arrives at an isolated English countryside estate with impeccable references and a quiet, unassuming manner, the wealthy Blackwood family welcomes him without suspicion. But as the meticulously tended gardens begin to reveal disturbing secrets — bones unearthed among the roots, strange symbols carved into ancient trees — the family's youngest daughter senses that the gardener is not who he claims to be. What unfolds is a slow-burn psychological thriller in which every character harbors a dark secret, and the estate's beautiful grounds hide a history of violence as old as the land itself."
+    },
+    {
+      "id": 35,
+      "title": "Michael",
+      "primary_release_date": "2026-04-24",
+      "poster_path": "/images/35.png",
+      "overview": "A sweeping and intimate biographical portrait of Michael Jackson — from his childhood in Gary, Indiana through his ascent as the King of Pop to the controversies that shadowed his final years.",
+      "vote_average": 7.6,
+      "backdrop_path": "/images/backdrop_35.jpg",
+      "genres": [
+        "Drama",
+        "Music",
+        "Biography"
+      ],
+      "director": "Antoine Fuqua",
+      "cast": [
+        "Jaafar Jackson",
+        "Colman Domingo",
+        "Nia Long",
+        "Miles Teller"
+      ],
+      "runtime": 130,
+      "rating": "PG-13",
+      "tagline": "Before the legend, there was a boy from Gary.",
+      "plot_summary": "A sweeping biographical portrait that traces Michael Jackson's extraordinary life from his childhood in Gary, Indiana, performing with his brothers in the Jackson 5 under the demanding eye of their father Joe, through his meteoric rise as a solo artist and global cultural icon. The film captures the creative genius behind groundbreaking albums, the pressure of unprecedented fame, and the personal struggles that shadowed his later years. Anchored by Jaafar Jackson's transformative performance as his uncle, the film aims to humanize without sanitizing, presenting Michael as both a visionary artist and a deeply complicated human being."
+    },
+    {
+      "id": 36,
+      "title": "Over Your Dead Body",
+      "primary_release_date": "2026-04-24",
+      "poster_path": "/images/36.png",
+      "overview": "A theatre troupe rehearsing a classic Japanese ghost story begins to experience events that mirror the play's curse with terrifying precision, blurring the line between performance and reality.",
+      "vote_average": 6.9,
+      "backdrop_path": "/images/backdrop_36.jpg",
+      "genres": [
+        "Horror",
+        "Mystery"
+      ],
+      "director": "Takashi Miike",
+      "cast": [
+        "Anya Taylor-Joy",
+        "Takeshi Kitano",
+        "Rinko Kikuchi"
+      ],
+      "runtime": 108,
+      "rating": "R",
+      "tagline": "The play never ends.",
+      "plot_summary": "A prestigious Tokyo theatre troupe begins rehearsals for Yotsuya Kaidan, a classic Japanese ghost story about betrayal, murder, and supernatural vengeance. As the actors immerse themselves in their roles, strange and terrifying events begin to mirror the play's ancient curse with unsettling precision — props move on their own, a ghostly figure appears in mirrors, and cast members suffer injuries that echo the story's violence. The line between performance and reality blurs as the troupe's director becomes obsessed with achieving an \"authentic\" production, even as the curse threatens to claim very real victims."
+    },
+    {
+      "id": 37,
+      "title": "The Story of Everything",
+      "primary_release_date": "2026-04-30",
+      "poster_path": "/images/37.jpg",
+      "overview": "A visually stunning documentary tracing the 13.8-billion-year story of the universe through the eyes of physicists, cosmologists, and philosophers working at the edge of human knowledge.",
+      "vote_average": 8.1,
+      "backdrop_path": "/images/backdrop_37.jpg",
+      "genres": [
+        "Documentary"
+      ],
+      "director": "Werner Herzog",
+      "cast": [
+        "Werner Herzog"
+      ],
+      "runtime": 142,
+      "rating": "PG",
+      "tagline": "From nothing, everything.",
+      "plot_summary": "A visually stunning documentary tracing the 13.8-billion-year story of the universe through the eyes of physicists, cosmologists, and philosophers working at the edge of human knowledge. From the incomprehensible energy of the Big Bang through the formation of galaxies and the emergence of life on Earth, the film weaves together breathtaking astrophotography, cutting-edge simulations, and deeply personal interviews with the scientists dedicating their lives to understanding existence. Werner Herzog's meditative narration connects the cosmic to the intimate, asking not just how we got here, but what it means to be a conscious being in an indifferent universe."
+    },
+    {
+      "id": 38,
+      "title": "The Devil Wears Prada 2",
+      "primary_release_date": "2026-05-01",
+      "poster_path": "/images/38.png",
+      "overview": "Andy Sachs has built a career on her own terms — until the collapse of print media throws her back into the orbit of the formidable Miranda Priestly and the ruthless world of fashion.",
+      "vote_average": 7.4,
+      "backdrop_path": "/images/backdrop_38.jpg",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "director": "David Frankel",
+      "cast": [
+        "Meryl Streep",
+        "Anne Hathaway",
+        "Emily Blunt",
+        "Stanley Tucci"
+      ],
+      "runtime": 120,
+      "rating": "PG-13",
+      "tagline": "Fashion fades. Power doesn't.",
+      "plot_summary": "Nearly two decades after her baptism by fire at Runway magazine, Andy Sachs has built a successful career as a journalist on her own terms. But when the collapse of print media threatens Runway's survival, Andy is drawn back into the orbit of the formidable Miranda Priestly — who is fighting to save her empire in a world that has moved online. Complicating matters, Andy's former colleague Emily is now a luxury group executive who controls the advertising budget that could make or break Runway. Old rivalries reignite, new alliances form, and the cutthroat world of fashion proves as ruthless as ever in this sharp, witty sequel."
+    },
+    {
+      "id": 39,
+      "title": "Animal Farm",
+      "primary_release_date": "2026-05-01",
+      "poster_path": "/images/39.png",
+      "overview": "A contemporary animated adaptation of George Orwell's classic allegory, following the farm animals who overthrow their farmer and gradually corrupt the very revolution they fought for.",
+      "vote_average": 7.8,
+      "backdrop_path": "/images/backdrop_39.jpg",
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Drama",
+        "Fantasy"
+      ],
+      "director": "Andy Serkis",
+      "cast": [
+        "Seth Rogen",
+        "Gaten Matarazzo",
+        "Woody Harrelson",
+        "Glenn Close",
+        "Kieran Culkin"
+      ],
+      "runtime": 96,
+      "rating": "PG",
+      "tagline": "All animals are equal. Some are more equal than others.",
+      "plot_summary": "A contemporary animated adaptation of George Orwell's classic political allegory, following the animals of Manor Farm who overthrow their cruel farmer Mr. Jones and establish their own society based on the principles of equality and justice. But as the pigs — led by the cunning Napoleon — gradually consolidate power, the revolution's ideals are corrupted by propaganda, greed, and authoritarianism. Seen through the eyes of young piglet Lucky, who must choose between loyalty and truth, the film delivers Orwell's timeless warning about the dangers of unchecked power in a visually stunning, family-accessible package."
+    },
+    {
+      "id": 40,
+      "title": "Mortal Kombat II",
+      "primary_release_date": "2026-05-08",
+      "poster_path": "/images/40.png",
+      "overview": "Earth's chosen fighters must seek out the legendary masters of Outworld's deadliest fighting styles to prepare for the next Mortal Kombat tournament — and the fate of two realms.",
+      "vote_average": 7,
+      "backdrop_path": "/images/backdrop_40.jpg",
+      "genres": [
+        "Action",
+        "Fantasy",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "director": "Simon McQuoid",
+      "cast": [
+        "Karl Urban",
+        "Jessica McNamee",
+        "Ludi Lin",
+        "Adeline Rudolph",
+        "Hiroyuki Sanada"
+      ],
+      "runtime": 116,
+      "rating": "R",
+      "tagline": "The tournament continues.",
+      "plot_summary": "With Outworld's dark emperor Shao Kahn threatening to merge the realms and enslave humanity, Earth's chosen champions must seek out legendary fighters to strengthen their ranks before the next Mortal Kombat tournament begins. Newcomer Johnny Cage joins returning warriors Liu Kang, Sonya Blade, and Jax as they journey into Outworld to train with ancient masters and forge alliances with Kitana and Jade, warriors who secretly oppose Shao Kahn's tyranny. As betrayals mount and the tournament's brutal fights push every combatant to their limit, the fate of two realms hangs on whether Earth's defenders can overcome their divisions and fight as one."
+    }
+  ]
+}

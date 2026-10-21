@@ -36,7 +36,7 @@
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",
-    "mock": "json-server movie-mock-api/movie-mock-api/db.json --port 3001 --host 0.0.0.0 --static movie-mock-api/movie-mock-api/public",
+    "mock": "json-server movie-mock-api/db.json --port 3001 --host 0.0.0.0 --static movie-mock-api/public",
     "typecheck": "tsc --noEmit",
     "dev": "expo start --dev-client",
     "prebuild": "expo prebuild",
