@@ -1,4 +1,105 @@
-# Regal Cinemas: Swift to Expo
+# Regal Cinemas
+
+<p align="center">
+  <img src="regal-live-coding/assets/icon.png" width="120" align="middle" alt="Regal live-coding app icon">
+</p>
+
+<p align="center"><i>Live-coding app (primary) + Swift &rarr; Expo POC (background).</i></p>
+
+**Primary:** `regal-live-coding/` — an Expo SDK 58 app built for the Regal Cinemas live-coding prompt
+([`Candidate Prompt.pdf`](regal-live-coding/Candidate%20Prompt.pdf)): a browsable carousel of movies released in a
+4-week window (today fixed at March 18, 2026), a movie detail screen, and a selectable 4-week release window,
+all against the local Movie API served from `regal-live-coding/movie-mock-api/` on `:3001`.
+
+**Background:** `regal-swift/` and `regal-expo/` — the same "Get Tickets" feature built twice (Swift/UIKit, then
+ported to React Native + Expo), written before the live coding as a POC. See
+[Background: Swift → Expo POC](#background-swift--expo-poc) below.
+
+- `regal-live-coding/`: Expo SDK 58, New Architecture, expo-router, TypeScript strict, React Query, zod at the API boundary.
+- `regal-swift/`: UIKit, Swift 6 (strict concurrency), MVVM + Coordinator, XcodeGen.
+- `regal-expo/`: Expo SDK 58, New Architecture, expo-router, TypeScript strict, one local Expo Module (`ticket-kit`).
+
+## Live coding: prompt → implementation
+
+| Prompt requirement | Implementation | Commit |
+| --- | --- | --- |
+| 1. Fetch `GET /movies`, past 4 weeks from 2026-03-18, `primary_release_date_gte/lte` | [`movieRepository.ts`](regal-live-coding/src/repositories/movieRepository.ts), [`releaseWindow.ts`](regal-live-coding/src/domain/releaseWindow.ts) | 7, 9 |
+| 2. Carousel: poster, title, release date, swipe navigation, tap to detail | [`MovieCarousel.tsx`](regal-live-coding/src/components/MovieCarousel.tsx), [`MoviesCarouselContext.tsx`](regal-live-coding/src/context/MoviesCarouselContext.tsx), [`app/(tabs)/index.tsx`](regal-live-coding/app/%28tabs%29/index.tsx) | 10–11 |
+| 3. Detail page: poster, title, release date, overview, rating, director/cast, plot summary (+ runtime, rating, tagline, genres, backdrop) | [`useMovieDetailViewModel.ts`](regal-live-coding/src/viewmodels/useMovieDetailViewModel.ts), [`app/movie/[id].tsx`](regal-live-coding/app/movie/%5Bid%5D.tsx) | 13–14 |
+| 4. (Optional) Any 4-week span between Jan 9 and May 8, 2026; user-friendly dates | [`ReleaseWindowPicker.tsx`](regal-live-coding/src/components/ReleaseWindowPicker.tsx) | 12 |
+| Technical: HTTP, loading/error states, responsive | [`client.ts`](regal-live-coding/src/api/client.ts), [`states.tsx`](regal-live-coding/src/components/states.tsx), `useWindowDimensions` in carousel/detail | 2, 6, 11 |
+
+### Where to look first (live coding)
+
+1. [`schemas.ts`](regal-live-coding/src/api/schemas.ts): the zod contract. Types are inferred, never hand-duplicated; json-server's string/number ID drift is normalized in one place.
+2. [`config/api.ts`](regal-live-coding/src/config/api.ts): base-URL resolution for web, iOS Simulator, Android emulator (`10.0.2.2`) and physical devices (Metro `hostUri`), so `localhost:3001` never leaks into a device build.
+3. [`movieRepository.ts`](regal-live-coding/src/repositories/movieRepository.ts): the data-source boundary. View models depend on this interface, never on endpoints.
+4. [`releaseWindow.ts`](regal-live-coding/src/domain/releaseWindow.ts): pure 28-day window math (anchor, clamping, formatting) — no React imports, testable in isolation.
+5. [`MovieCarousel.tsx`](regal-live-coding/src/components/MovieCarousel.tsx): FlashList with snap + viewability-driven active movie; tap passes only the ID.
+6. [`useMovieDetailViewModel.ts`](regal-live-coding/src/viewmodels/useMovieDetailViewModel.ts): rehydrates the detail screen by ID (deep-link safe), separates 404 from other errors, formats runtime/vote for the view.
+
+### Built commit by commit
+
+The live-coding app lands as atomic Conventional Commits, stricter than the POC below: each commit is one logical
+concern, and each passes `tsc` and `expo lint` on its own in a clean checkout (verified per SHA in a detached
+worktree). This docs commit (17) is the only one not linked below.
+
+**Release** comes from [`@expo/fingerprint`](https://docs.expo.dev/versions/latest/sdk/fingerprint/) (iOS), recorded in
+each commit's trailers — the same convention as the POC. A changed hash means the merge needs a new native build
+(EAS Build + store); an unchanged hash means it ships as an OTA update (EAS Update).
+
+| # | Commit | Why | Release |
+| --- | --- | --- | --- |
+| 1 | [`chore(live-coding): scaffold Expo SDK 58 + expo-router`](https://github.com/gg-ballin/regal-swift-to-expo/commit/549865c24a57c358afe9e8aa76f8a4081e4160a2) | Ship every native dependency in one binary | **Native build** `8e549a5` |
+| 2 | [`feat(theme): design tokens + shared screen states`](https://github.com/gg-ballin/regal-swift-to-expo/commit/b6885e1493fca755758fbbed259c4fe1c93467da) | Tokens ported from the POC theme; Loading/Error/Empty states | OTA `8e549a5` |
+| 3 | [`feat(app-shell): Regal header + root/tab navigation`](https://github.com/gg-ballin/regal-swift-to-expo/commit/54c33d3fa3b088621061df53495cd8f7a41e025b) | Branded header, tab bar, stack | OTA `8e549a5` |
+| 4 | [`feat(data): API base-URL resolution`](https://github.com/gg-ballin/regal-swift-to-expo/commit/611de83fdcdcd616f862f0389b3f1cb39cc8027e) | One place that knows about `:3001` hosts | OTA `8e549a5` |
+| 5 | [`feat(data): zod movie contract`](https://github.com/gg-ballin/regal-swift-to-expo/commit/6a527f38e83749c5142cda2d49301bd71a7c6ee2) | Validate at the boundary | OTA `8e549a5` |
+| 6 | [`feat(data): typed HTTP client`](https://github.com/gg-ballin/regal-swift-to-expo/commit/ffff873d694574af02ecec318a48a15fc170efd3) | Timeout, `ApiError`, request logging | OTA `8e549a5` |
+| 7 | [`feat(data): movie repository`](https://github.com/gg-ballin/regal-swift-to-expo/commit/f8e5722c9831d868fba8675733b2642a4413588b) | Endpoint seam for view models | OTA `8e549a5` |
+| 8 | [`feat(api): API health diagnostic tab`](https://github.com/gg-ballin/regal-swift-to-expo/commit/160d09fc5b6023284500a5e4d65f6d98ace82e4b) | First diagnostic when the mock server is unreachable | OTA `8e549a5` |
+| 9 | [`feat(domain): 28-day release-window logic`](https://github.com/gg-ballin/regal-swift-to-expo/commit/7ef687aa7eba434e429f810a5e78767a8c6c5552) | Prompt date rules as pure functions | OTA `8e549a5` |
+| 10 | [`feat(movies): carousel state + FlashList carousel`](https://github.com/gg-ballin/regal-swift-to-expo/commit/90a002fb612e4e4e31e0e3eefaeb2abecf30e07e) | Swipeable poster rail, active-movie tracking | OTA `8e549a5` |
+| 11 | [`feat(movies): Coming Soon list screen`](https://github.com/gg-ballin/regal-swift-to-expo/commit/4c943a04d91e2c0e3ddcceea1cd2403d7d772e0f) | `GET /movies` over the default window, all four states | OTA `8e549a5` |
+| 12 | [`feat(movies): release-window date picker`](https://github.com/gg-ballin/regal-swift-to-expo/commit/39a667d58eb59d8ed431d4f1b82e812fa25f1ab3) | Optional prompt clause: any 4-week span | OTA `8e549a5` |
+| 13 | [`feat(movie-detail): detail view model`](https://github.com/gg-ballin/regal-swift-to-expo/commit/fc98dfe0acca3a578c58a9095031458962441efe) | Formatting + error semantics off the view | OTA `8e549a5` |
+| 14 | [`feat(movie-detail): detail screen`](https://github.com/gg-ballin/regal-swift-to-expo/commit/9a6c2c885b734a823a8b4a778ba31603bdf334a8) | Full prompt field set, backdrop→poster fallback | OTA `8e549a5` |
+| 15 | [`feat(tickets): placeholder My Tickets tab`](https://github.com/gg-ballin/regal-swift-to-expo/commit/05eefedc2a858c3f00dfa25039d29ec09cae66e1) | Tab parity; bookings land here later | OTA `8e549a5` |
+| 16 | [`chore(mock): vendor movie-mock-api fixture + yarn mock`](https://github.com/gg-ballin/regal-swift-to-expo/commit/2c37febde85c4eb05b245ec28e8bddb413a85d69) | The API the app was built against, reproducible | none |
+| 17 | `docs(live-coding): candidate prompt + root README entry` | Provenance and this document | none |
+
+**1 of 15 app commits needed a native build** (`8e549a5`). Commit 1 sets the native baseline (SDK 58, dev client,
+`@expo/ui`, FlashList); commits 2–15 are JS/TS only and keep fingerprint `8e549a5`. (HEAD reads `b0c6dbd` only
+because commit 16 changed the `mock` script in `package.json`, which fingerprint hashes — no native change.)
+
+```bash
+# See the 17 live-coding commits (path-scoped, works on any branch after merge)
+git log --oneline -- regal-live-coding/
+# Same, with release trailers (Release / Fingerprint per commit)
+git log --format='%h %s | %(trailers:key=Release,valueonly) | %(trailers:key=Fingerprint,valueonly)' -- regal-live-coding/
+cd regal-live-coding && npx @expo/fingerprint fingerprint:generate --platform ios   # reproduce a hash
+```
+
+### Run it (live coding)
+
+```bash
+cd regal-live-coding && yarn install
+yarn mock   # terminal 1: Movie API on :3001 (json-server, movie-mock-api/)
+yarn dev    # terminal 2: Metro for the dev client (yarn expo run:ios once, for the native build)
+yarn tsc --noEmit && yarn expo lint
+```
+
+The API tab inside the app is the connectivity check: if it cannot reach `:3001`, the mock server is not running or
+the host resolution in `config/api.ts` does not match the target (simulator vs. emulator vs. device).
+
+### Next (live coding)
+
+Tests for the pure logic in `releaseWindow.ts`, pagination with `useInfiniteQuery`, and persisted query cache for
+offline launches.
+
+---
+
+## Background: Swift → Expo POC
 
 <p align="center">
   <img src="assets/icons/regal-swift-icon.png" width="120" align="middle" alt="Regal Swift app icon">
@@ -10,9 +111,6 @@
 
 The same "Get Tickets" feature built twice: once in **Swift / UIKit**, once in **React Native + Expo**.
 The Expo app uses Expo libraries first and keeps native code only where the platform owns the capability. That native code is the UIKit app's own `CaptureObserver`, shared as the same Swift file.
-
-- `regal-swift/`: UIKit, Swift 6 (strict concurrency), MVVM + Coordinator, XcodeGen.
-- `regal-expo/`: Expo SDK 58, New Architecture, expo-router, TypeScript strict, one local Expo Module (`ticket-kit`).
 
 <table>
   <tr><th></th><th>Movie detail</th><th>Seat selection</th><th>Ticket</th></tr>
@@ -30,7 +128,7 @@ The Expo app uses Expo libraries first and keeps native code only where the plat
   </tr>
 </table>
 
-## Where to look first
+### Where to look first (POC)
 
 1. [`ticket-kit/ios/TicketKitModule.swift`](regal-expo/modules/ticket-kit/ios/TicketKitModule.swift): the whole native surface of the Expo app. Main-queue reads, listener-scoped observation, no retain cycles.
 2. [`TicketKitCore/CaptureObserver.swift`](regal-swift/TicketKitCore/CaptureObserver.swift): the Swift file both apps compile. The module links it through a symlink instead of rewriting it.
@@ -41,7 +139,7 @@ The Expo app uses Expo libraries first and keeps native code only where the plat
 
 **Reading guide:** `// SWIFT:` comments in the Expo code name the UIKit construct each line replaces, so a Swift reviewer can read the port side by side.
 
-## Built PR by PR
+### Built PR by PR (POC)
 
 The Swift app is committed in one piece. The Expo app is committed as eight steps, each the size of a reviewable PR, each passing `tsc`, `expo lint` and `jest` on its own. The history was rebuilt into these steps for review, so commit dates are not development dates.
 
@@ -62,7 +160,10 @@ The Swift app is committed in one piece. The Expo app is committed as eight step
 **2 of 8 Expo PRs needed a native build.** PR 1 sets the native baseline. PR 7's hash changed for exactly two reasons: `modules/ticket-kit/ios` and the iOS autolinking config. Sizes exclude the lockfile and JSON fixtures.
 
 ```bash
-git log --format='%h %s | %(trailers:key=Release,valueonly)'   # tags
+# See the 9 POC commits (1 Swift + 8 Expo, path-scoped)
+git log --oneline -- regal-swift/ regal-expo/
+# Same, with release trailers (Release / Fingerprint per commit)
+git log --format='%h %s | %(trailers:key=Release,valueonly) | %(trailers:key=Fingerprint,valueonly)' -- regal-swift/ regal-expo/
 cd regal-expo && npx @expo/fingerprint fingerprint:generate --platform ios   # reproduce a hash
 ```
 
@@ -129,7 +230,7 @@ cd regal-expo && npx @expo/fingerprint fingerprint:generate --platform ios   # r
 - `useDemoRoute` mirrors the Swift `-demoRoute seats|ticket` launch argument, used for the screenshots above.
 </details>
 
-## Swift to Expo, side by side
+### Swift to Expo, side by side
 
 | Concern                          | Swift (UIKit)                           | Expo                                                     |
 | -------------------------------- | --------------------------------------- | -------------------------------------------------------- |
@@ -143,14 +244,14 @@ cd regal-expo && npx @expo/fingerprint fingerprint:generate --platform ios   # r
 | QR                               | CoreImage                               | `toqr` + `react-native-svg`                              |
 | Recording detection              | `CaptureObserver`                       | The same `CaptureObserver`, through `ticket-kit`         |
 
-## Trade-offs
+### Trade-offs (POC)
 
 - **iOS detects, Android blocks.** iOS shows a shield while recording (parity with the Swift UX). Android has no recording detection without Kotlin, so it blocks capture with `FLAG_SECURE`. Switching iOS to blocking would remove the last native code, but change the UX.
 - **One repo** so both apps share `TicketKitCore` and the JSON through symlinks. At company scale, `TicketKitCore` would be a versioned Swift Package used by the native app and by the module's podspec.
 - **Brightness is system-wide**, so it is restored on blur and on background, not only on unmount.
 - **`<SecureView>`** relies on the secure text field canvas, since UIKit has no public API for this. If iOS changes it, the QR still renders, just unprotected.
 
-## Run it
+### Run it (POC)
 
 ```bash
 # Swift
@@ -166,6 +267,6 @@ npx tsc --noEmit && npx expo lint && npx jest
 
 Brightness and haptics only work on a device. Screenshots can be triggered in the Simulator under Device > Trigger Screenshot.
 
-## Next
+### Next (POC)
 
 PassKit (Add to Wallet), Apple Pay and Live Activities as Expo Modules, with Kotlin counterparts for Android. More detail in [`docs/REGAL_PORT_POC_PLAN.md`](docs/REGAL_PORT_POC_PLAN.md).
